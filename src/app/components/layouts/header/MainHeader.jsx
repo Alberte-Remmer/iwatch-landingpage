@@ -18,7 +18,7 @@ const MainHeader = () => {
       <Logo />
       <Nav />
       <div style={{ display: "flex" }}>
-        <SearchButton />
+        <SearchButton color="var(--accent-color)" />
         <span
           style={{
             width: "2px",
@@ -28,7 +28,7 @@ const MainHeader = () => {
             display: "inline-block",
           }}
         ></span>
-        <CartButton />
+        <CartButton color="var(--accent-color)" />
       </div>
     </div>
   );
