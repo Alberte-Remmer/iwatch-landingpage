@@ -11,9 +11,9 @@ import ImageCardList from "./components/ui/cards/ImageCardList";
 export default function Home() {
   const myColors = ["#434558", "#6ADDCC", "#F9CDC4"]; //Antallet af farver afgør antallet af cirkler
   const images = [
-    { src: Navy, bg: "#434558" },
-    { src: Mint, bg: "#6ADDCC" },
-    { src: Ocean, bg: "#F9CDC4" },
+    { id: 1, src: Navy, bg: "#434558" },
+    { id: 2, src: Mint, bg: "#6ADDCC" },
+    { id: 3, src: Ocean, bg: "#F9CDC4" },
   ];
   return (
     <div className="grid-container">

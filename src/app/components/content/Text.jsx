@@ -9,4 +9,3 @@ const Text = ({ h1, h2 }) => {
 
 export default Text;
 
-<style></style>;

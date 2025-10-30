@@ -8,8 +8,8 @@ const ImageCardList = ({ images }) => {
         gap: "1.5rem",
       }}
     >
-      {images.map((img, i) => (
-        <ImageCardButton key={i} src={img.src} bg={img.bg} />
+      {images.map((img) => (
+        <ImageCardButton key={img.id} src={img.src} bg={img.bg} />
       ))}
     </div>
   );

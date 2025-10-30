@@ -12,9 +12,9 @@ const ColorButtonList = ({ colors }) => (
   >
     {/* Mapper over farverne og opretter en ButtonColor for hver */}
     {colors.map((color, i) => (
-      <div>
+      <div key={color}>
         {/* Viser en cirkel med den aktuelle farve */}
-        <ColorButton key={i} color={color} /> {/* Key er en prop i React som identificerer hvert element i en liste*/}
+        <ColorButton color={color} /> {/* Key er en prop i React som identificerer hvert element i en liste*/}
         {/* Tilføjer en lodret linje efter hver cirkel, undtagen den sidste */}
         {i < colors.length - 1 && (
           <div
