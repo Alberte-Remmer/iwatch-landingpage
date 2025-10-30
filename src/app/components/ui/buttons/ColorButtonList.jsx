@@ -1,7 +1,7 @@
 import ColorButton from "./ColorButton";
 
 // ShiftColor modtager et array af farver som prop
-const ColorButtonList = ({ colors }) => (
+const ColorButtonList = ({ colors, images, handleProductColor }) => (
   // Container til cirkler og linjer
   <div
     style={{
@@ -14,7 +14,7 @@ const ColorButtonList = ({ colors }) => (
     {colors.map((color, i) => (
       <div key={color}>
         {/* Viser en cirkel med den aktuelle farve */}
-        <ColorButton color={color} /> {/* Key er en prop i React som identificerer hvert element i en liste*/}
+        <ColorButton color={color} src={images[i].src} handleProductColor={handleProductColor} /> {/* Key er en prop i React som identificerer hvert element i en liste*/}
         {/* Tilføjer en lodret linje efter hver cirkel, undtagen den sidste */}
         {i < colors.length - 1 && (
           <div

@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 import Image from "next/image";
 import Navy from "../../public/navy.png";
 import Mint from "../../public/mint.png";
@@ -7,6 +9,7 @@ import PrimaryButton from "./components/ui/buttons/PrimaryButton";
 import ShiftPageButton from "./components/ui/buttons/ShiftPageButton";
 import ColorButtonList from "./components/ui/buttons/ColorButtonList";
 import ImageCardList from "./components/ui/cards/ImageCardList";
+import { useState } from "react";
 
 export default function Home() {
   const myColors = ["#434558", "#6ADDCC", "#F9CDC4"]; //Antallet af farver afgør antallet af cirkler
@@ -15,6 +18,15 @@ export default function Home() {
     { id: 2, src: Mint, bg: "#6ADDCC" },
     { id: 3, src: Ocean, bg: "#F9CDC4" },
   ];
+
+
+
+  const [productColor, setProductColor] = useState(images[0].src);
+
+  const handleProductColor = (src) => {
+    setProductColor(src);
+  };
+
   return (
     <div className="grid-container">
       <div className="text-wrapper">
@@ -24,16 +36,16 @@ export default function Home() {
         <PrimaryButton text="Buy Now" />
       </div>
       <div className="image-wrapper">
-        <Image src={Navy} alt="Navy watch" />
+        <Image src={productColor} alt="Navy watch" />
       </div>
       <div className="shift-page-button-wrapper">
         <ShiftPageButton number={1} />
       </div>
       <div className="color-button-list-wrapper">
-        <ColorButtonList colors={myColors} width={200} height={200} />
+        <ColorButtonList colors={myColors} images={images} handleProductColor={handleProductColor} width={200} height={200} />
       </div>
       <div className="image-card-list-wrapper">
-        <ImageCardList images={images} />
+        <ImageCardList images={images} handleProductColor={handleProductColor} />
       </div>
     </div>
   );
