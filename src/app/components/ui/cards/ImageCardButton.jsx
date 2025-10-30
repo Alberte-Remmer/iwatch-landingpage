@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const ImageCardButton = ({ src, bg }) => {
+const ImageCardButton = ({ src, bg, handleProductColor }) => {
   return (
     <div
       style={{
@@ -12,7 +12,7 @@ const ImageCardButton = ({ src, bg }) => {
         display: "inline-block",
       }}
     >
-      <button className="image-card-button" style={{ background: "transparent", border: "none", color: "inherit", cursor: "pointer" }}>
+      <button className="image-card-button" onClick={() => handleProductColor(src)} style={{ background: "transparent", border: "none", color: "inherit", cursor: "pointer" }}>
         {/* Halv baggrund med lav opacity */}
         <div
           className="pseudo-element"

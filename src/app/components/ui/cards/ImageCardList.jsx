@@ -1,6 +1,6 @@
 import ImageCardButton from "./ImageCardButton";
 
-const ImageCardList = ({ images }) => {
+const ImageCardList = ({ images, handleProductColor }) => {
   return (
     <div
       style={{
@@ -9,7 +9,7 @@ const ImageCardList = ({ images }) => {
       }}
     >
       {images.map((img) => (
-        <ImageCardButton key={img.id} src={img.src} bg={img.bg} />
+        <ImageCardButton key={img.id} src={img.src} bg={img.bg} handleProductColor={handleProductColor} />
       ))}
     </div>
   );
