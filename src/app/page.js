@@ -19,8 +19,6 @@ export default function Home() {
     { id: 3, src: Ocean, bg: "#F9CDC4" },
   ];
 
-
-
   const [productColor, setProductColor] = useState(images[0].src);
 
   const handleProductColor = (src) => {
@@ -42,7 +40,7 @@ export default function Home() {
         <ShiftPageButton number={1} />
       </div>
       <div className="color-button-list-wrapper">
-        <ColorButtonList colors={myColors} images={images} handleProductColor={handleProductColor} width={200} height={200} />
+        <ColorButtonList colors={myColors} images={images} productColor={productColor} handleProductColor={handleProductColor} width={200} height={200} />
       </div>
       <div className="image-card-list-wrapper">
         <ImageCardList images={images} handleProductColor={handleProductColor} />

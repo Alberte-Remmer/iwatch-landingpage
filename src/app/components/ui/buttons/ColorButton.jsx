@@ -1,13 +1,12 @@
-const ColorButton = ({ color, src, handleProductColor }) => {
+const ColorButton = ({ color, src, isActive, handleProductColor }) => {
   return (
     <div
-      className="color-button"
+      className={`color-button ${isActive ? "active" : ""}`}
       onClick={() => handleProductColor(src)}
       style={{
         width: "30px",
         height: "30px",
         borderRadius: "50%",
-        border: "2px solid #fff",
         background: color,
       }}
     />
