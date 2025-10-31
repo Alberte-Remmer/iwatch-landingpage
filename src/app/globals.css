@@ -143,10 +143,12 @@ body {
 /* ColorButton hover */
 .color-button {
   transition: transform 0.2s;
+  border: 2px solid #fff;
 }
 
-.color-button:hover {
+.color-button.active {
   transform: scale(1.2);
+  border: 3px solid var(--accent-color);
 }
 
 /* CARDS */
