@@ -26,24 +26,33 @@ export default function Home() {
   };
 
   return (
-    <div className="grid-container">
-      <div className="text-wrapper">
+    <div className="mt-4 grid grid-cols-[2fr_1fr_0.2fr] grid-rows-[2fr_0.5fr] gap-x-14 gap-y-20">
+      <div className="text-wrapper col-start-1 col-end-2 row-start-1 space-y-6! self-center">
         <Text h1="The Perfect Moment" h2="Between Past And Future." />
-      </div>
-      <div className="button-wrapper">
         <PrimaryButton text="Buy Now" />
       </div>
-      <div className="image-wrapper">
+
+      <div className="col-start-2 col-end-3 row-start-1 row-end-2 self-center justify-self-end">
         <Image src={productColor} alt="Navy watch" />
       </div>
-      <div className="shift-page-button-wrapper">
+      <div className="col-start-1 row-start-2 self-end justify-self-start">
         <ShiftPageButton number={1} />
       </div>
-      <div className="color-button-list-wrapper">
-        <ColorButtonList colors={myColors} images={images} productColor={productColor} handleProductColor={handleProductColor} width={200} height={200} />
+      <div className="col-start-3 col-end-4 row-start-1 self-center justify-self-end">
+        <ColorButtonList
+          colors={myColors}
+          images={images}
+          productColor={productColor}
+          handleProductColor={handleProductColor}
+          width={200}
+          height={200}
+        />
       </div>
-      <div className="image-card-list-wrapper">
-        <ImageCardList images={images} handleProductColor={handleProductColor} />
+      <div className="col-start-2 col-end-3 row-start-2 self-end justify-self-center">
+        <ImageCardList
+          images={images}
+          handleProductColor={handleProductColor}
+        />
       </div>
     </div>
   );

@@ -6,29 +6,30 @@ import Nav from "./Nav";
 const MainHeader = () => {
   return (
     <div
-      className="header"
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "1rem 0",
-      }}
+      className="mb-12! flex flex-row items-center justify-between py-8!"
+      // style={{
+      //   display: "flex",
+      //   flexDirection: "row",
+      //   alignItems: "center",
+      //   justifyContent: "space-between",
+      //   padding: "1rem 0",
+      // }}
     >
       <Logo />
       <Nav />
-      <div style={{ display: "flex" }}>
-        <SearchButton color="var(--accent-color)" />
+      <div className="flex gap-3">
+        <SearchButton color="var(--color-secondary)" />
         <span
-          style={{
-            width: "2px",
-            height: "32px",
-            background: "#fff",
-            margin: "0 1rem",
-            display: "inline-block",
-          }}
+          className="mx-4 inline-block h-8 w-0.5 bg-secondary"
+          // style={{
+          //   width: "2px",
+          //   height: "32px",
+          //   background: "#fff",
+          //   margin: "0 1rem",
+          //   display: "inline-block",
+          // }}
         ></span>
-        <CartButton color="var(--accent-color)" />
+        <CartButton color="var(--color-secondary)" />
       </div>
     </div>
   );
